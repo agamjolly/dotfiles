@@ -1,0 +1,76 @@
+{
+	"name": "shades-of-purple",
+	"displayName": "Shades of Purple",
+	"description": "⚡ A professional theme suite with hand-picked & bold 🦄 shades of purple for your VS Code editor and terminal apps. One of the excellent most downloaded and top rated VSCode Themes on the marketplace. Part of VSCode.pro course.",
+	"version": "5.21.0",
+	"publisher": "ahmadawais",
+	"engines": {
+		"vscode": "^1.15.0"
+	},
+	"icon": "images/icon/logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ahmadawais/shades-of-purple-vscode"
+	},
+	"galleryBanner": {
+		"color": "#222145",
+		"theme": "dark"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"Shades of Purple",
+		"Dark Theme",
+		"VSCode Power User",
+		"Shade of Purple",
+		"Cobalt"
+	],
+	"contributes": {
+		"themes": [
+			{
+				"label": "Shades of Purple",
+				"uiTheme": "vs-dark",
+				"path": "./themes/shades-of-purple-color-theme.json"
+			}
+		]
+	},
+	"devDependencies": {
+		"auto-changelog": "^1.12.0",
+		"nodemon": "^1.18.10",
+		"release-it": "^10.3.1"
+	},
+	"auto-changelog": {
+		"output": "CHANGELOG.md",
+		"template": ".clrc.hbs",
+		"commitLimit": false,
+		"package": true,
+		"replaceText": {
+			"(NEW|IMPROVE|FIX|DOC|RELEASE|TEST): ": ""
+		}
+	},
+	"files": [
+		".vscodeignore",
+		"themes/shades-of-purple-color-theme.json",
+		"themes",
+		"themes/*",
+		"images/icon/logo.png",
+		"package.json",
+		"readme.md",
+		"code-of-conduct.md",
+		"changelog.md"
+	],
+	"scripts": {
+		"start": "nodemon --exec vsce package",
+		"log": "auto-changelog && git add . && git ci -m ' 📖 DOC: Update the changelog' && git push",
+		"release": "release-it && npx vsce publish",
+		"release-major": "release-it major && npx vsce publish",
+		"release-dry": "release-it --dry-run",
+		"beforeStage": "auto-changelog"
+	},
+	"__metadata": {
+		"id": "431aa1a8-74f4-43d5-a83b-f4960510da5f",
+		"publisherId": "530c7464-efca-4776-9142-c6f0aeb4084e",
+		"publisherDisplayName": "Ahmad Awais ⚡"
+	}
+}

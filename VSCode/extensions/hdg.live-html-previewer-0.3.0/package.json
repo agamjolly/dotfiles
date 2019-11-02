@@ -1,0 +1,107 @@
+{
+	"name": "live-html-previewer",
+	"displayName": "Live HTML Previewer",
+	"description": "Edit and preview HTML documents in VS Code",
+	"version": "0.3.0",
+	"publisher": "hdg",
+	"author": "Harshdeep Gupta",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+		"html",
+		"css",
+		"preview",
+		"vscode"
+	],
+	"galleryBanner": {
+		"color": "#2E0854",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/HarshdeepGupta/live-html-preview.git"
+	},
+	"bugs": {
+		"url": "https://github.com/HarshdeepGupta/live-html-preview/issues"
+	},
+	"license": "MIT",
+	"icon": "Resources/Images/icon.png",
+	"activationEvents": [
+		"onLanguage:html"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.sidePreview",
+				"title": "Show side preview"
+			},
+			{
+				"command": "extension.fullPreview",
+				"title": "Show full preview"
+			},
+			{
+				"command": "extension.inBrowser",
+				"title": "Open in browser"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"when": "resourceLangId == html",
+					"command": "extension.inBrowser",
+					"group": "navigation"
+				}
+			],
+			"editor/context": [
+				{
+					"when": "resourceLangId == html",
+					"command": "extension.inBrowser",
+					"group": "navigation"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"command": "extension.sidePreview",
+				"key": "ctrl+q s",
+				"mac": "ctrl+q s",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.fullPreview",
+				"key": "ctrl+q f",
+				"mac": "ctrl+q f",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.inBrowser",
+				"key": "ctrl+q w",
+				"mac": "ctrl+q w",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	},
+	"dependencies": {
+		"opn": "^4.0.2",
+		"path": "^0.12.7"
+	},
+	"__metadata": {
+		"id": "cd9480c7-b1ec-4528-9c9e-e1e1d71c3652",
+		"publisherId": "200e5d9d-d63a-4742-b671-1d842dfeb329",
+		"publisherDisplayName": "Harshdeep Gupta"
+	}
+}

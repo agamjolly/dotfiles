@@ -1,0 +1,14 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "/home/agamjolly/.config/Code/User/workspaceStorage/e51e4d260632efdf2fd12580dc22c330/redhat.java/.0ed93e3730b54ec827eb5c6f5a65518f8d6ecd43-audit.json",
+    "files": [
+        {
+            "date": 1572153562811,
+            "name": "/home/agamjolly/.config/Code/User/workspaceStorage/e51e4d260632efdf2fd12580dc22c330/redhat.java/client.log.2019-10-26",
+            "hash": "b2751055d1699e3b296dd4f4554135fd"
+        }
+    ]
+}

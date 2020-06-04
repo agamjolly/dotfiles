@@ -33,9 +33,9 @@ export FLASK_APP=app.py
 ```
 (Optional) Change the development environment:
 ```bash
-export FLASK_ENV=development # runs in development mode and facilitates automatic refreshing for frontend changes
+export FLASK_ENV=debug # runs in debug mode and facilitates automatic refreshing for frontend changes
 ```
-Make the code publicly available to everyone in the localhost:
+Make the code publicly available to everyone in localhost:
 ```bash
 flask run --host=0.0.0.0 --port=8000 # also stops interference with nginx 
 ```
